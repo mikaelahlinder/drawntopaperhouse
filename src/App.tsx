@@ -13,7 +13,6 @@ const Logo = styled.img`
   max-width: 500px;
   margin-top: 4rem;
   @media (max-width: 420px) {
-    margin-top: 10rem;
     max-width: 300px;
   }
 `
