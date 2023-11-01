@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'EastBorder';
+  src:
+    local('EastBorder'),
+    url('./EastBorder.ttf') format('truetype');
+}
