@@ -1,3 +1,4 @@
+import { keyframes } from '@emotion/react'
 import styled from '@emotion/styled'
 import logo from './resources/logo.png'
 
@@ -36,6 +37,11 @@ const Text = styled.div`
   }
 `
 
+const marquee = keyframes`
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+`
+
 const Banner = styled.div`
   font-family: 'Gaela';
   font-weight: 200;
@@ -45,16 +51,20 @@ const Banner = styled.div`
   color: #fff;
   background-color: #000;
   padding: 0.5rem;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: nowrap;
-  text-align: center;
+  height: 30px;
+  > div {
+    position: absolute;
+    overflow: hidden;
+    animation: ${marquee} 30s linear infinite;
+  }
+  span {
+    margin-left: 100px;
+  }
+  span:nth-child(1) {
+    margin-left: 0;
+  }
   @media (max-width: 420px) {
     font-size: 12px;
-    div:nth-of-type(4) {
-      display: none;
-    }
   }
 `
 
@@ -82,10 +92,12 @@ function App() {
         </Text>
       </Container>
       <Banner>
-        <div>DRAWN TO YOU</div>
-        <div>DRAWN TO EACHOTHER</div>
-        <div>DRAWN TOGETHER</div>
-        <div>DRAWN TO YOU</div>
+        <div>
+          <span>DRAWN TO YOU</span>
+          <span>DRAWN TO EACHOTHER</span>
+          <span>DRAWN TOGETHER</span>
+          <span>DRAWN TO YOU</span>
+        </div>
       </Banner>
     </>
   )
