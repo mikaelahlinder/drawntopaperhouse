@@ -38,22 +38,23 @@ const Text = styled.div`
 `
 
 const Banner = styled.div`
-  font-family: 'EastBorder';
+  font-family: 'Gaela';
   font-weight: 200;
-  font-size: 24px;
+  font-size: 28px;
   position: sticky;
   bottom: 0;
   color: #fff;
   background-color: #000;
-  padding: 0.2rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-evenly;
-  span {
-    display: inline-block;
-  }
+  align-items: center;
+  flex-wrap: nowrap;
+  text-align: center;
   @media (max-width: 420px) {
-    font-size: 14px;
-    span {
+    font-size: 12px;
+    div:nth-of-type(4) {
+      display: none;
     }
   }
 `
@@ -82,10 +83,10 @@ function App() {
         </Text>
       </Container>
       <Banner>
-        <span>DRAWN TO YOU</span>
-        <span>DRAWN TO EACHOTHER</span>
-        <span>DRAWN TOGETHER</span>
-        <span>DRAWN TO YOU</span>
+        <div>DRAWN TO YOU</div>
+        <div>DRAWN TO EACHOTHER</div>
+        <div>DRAWN TOGETHER</div>
+        <div>DRAWN TO YOU</div>
       </Banner>
     </>
   )
