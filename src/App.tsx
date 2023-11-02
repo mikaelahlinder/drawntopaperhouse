@@ -19,11 +19,10 @@ const Logo = styled.img`
 
 const Text = styled.div`
   max-width: 800px;
-  margin-top: 3rem;
+  margin-top: 5rem;
   text-align: center;
   font-size: 20px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: 200;
+  font-family: 'Gaela', Arial, sans-serif;
   span {
     display: inline-block;
     margin-bottom: 2rem;
