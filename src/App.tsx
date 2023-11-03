@@ -94,8 +94,7 @@ function App() {
           </span>
           <span>
             Our first collection will be released in early 2024.
-            <br /> For now please do stay in touch on instagram, send an email
-            or sign up for updates.
+            <br /> For now please do stay in touch on Instagram.
           </span>
           <span>
             Looking forward to seeing you again soon,
