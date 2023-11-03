@@ -37,11 +37,6 @@ const Text = styled.div`
   }
 `
 
-const marquee = keyframes`
-  0% { transform: translateX(100vw); }
-  100% { transform: translateX(-100%); }
-`
-
 const Banner = styled.div`
   font-family: 'Gaela';
   font-weight: 200;
@@ -50,22 +45,39 @@ const Banner = styled.div`
   bottom: 0;
   color: #fff;
   background-color: #000;
-  padding: 0.5rem;
-  height: 30px;
-  > div {
-    position: absolute;
-    overflow: hidden;
-    animation: ${marquee} 30s linear infinite;
+  padding-top: 0.5rem;
+  ul {
+    margin: 0;
+    padding: 0;
   }
-  span {
-    margin-left: 100px;
-  }
-  span:nth-child(1) {
-    margin-left: 0;
+  li {
+    list-style-type: none;
   }
   @media (max-width: 420px) {
-    font-size: 12px;
+    font-size: 14px;
   }
+`
+
+const scroll = keyframes`
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-100% - var(--gap))); }
+`
+
+const Marquee = styled.div`
+  --gap: 1rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+`
+
+const MarqueeContent = styled.ul`
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: ${scroll} 20s linear infinite;
 `
 
 function App() {
@@ -92,12 +104,20 @@ function App() {
         </Text>
       </Container>
       <Banner>
-        <div>
-          <span>DRAWN TO YOU</span>
-          <span>DRAWN TO EACHOTHER</span>
-          <span>DRAWN TOGETHER</span>
-          <span>DRAWN TO YOU</span>
-        </div>
+        <Marquee>
+          <MarqueeContent>
+            <li>DRAWN TO YOU</li>
+            <li>DRAWN TO EACHOTHER</li>
+            <li>DRAWN TOGETHER</li>
+            <li>DRAWN TO YOU</li>
+          </MarqueeContent>
+          <MarqueeContent>
+            <li>DRAWN TO YOU</li>
+            <li>DRAWN TO EACHOTHER</li>
+            <li>DRAWN TOGETHER</li>
+            <li>DRAWN TO YOU</li>
+          </MarqueeContent>
+        </Marquee>
       </Banner>
     </>
   )
