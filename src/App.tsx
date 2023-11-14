@@ -111,8 +111,8 @@ function App() {
             <li>DRAWN TO YOU</li>
           </MarqueeContent>
           <MarqueeContent>
-            <li>DRAWN TO YOU</li>
             <li>DRAWN TO EACHOTHER</li>
+            <li>DRAWN TO YOU</li>
             <li>DRAWN TOGETHER</li>
             <li>DRAWN TO YOU</li>
           </MarqueeContent>
