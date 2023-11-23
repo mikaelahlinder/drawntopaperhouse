@@ -80,6 +80,10 @@ const MarqueeContent = styled.ul`
   animation: ${scroll} 20s linear infinite;
 `
 
+const Link = styled.a`
+  color: inherit;
+`
+
 function App() {
   return (
     <>
@@ -94,7 +98,15 @@ function App() {
           </span>
           <span>
             Our first collection will be released in early 2024.
-            <br /> For now please do stay in touch on Instagram.
+            <br /> For now please do stay in touch on{' '}
+            <Link
+              href="https://instagram.com/drawnto_paperhouse"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </Link>
+            .
           </span>
           <span>
             Looking forward to seeing you again soon,
